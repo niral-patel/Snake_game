@@ -5,12 +5,20 @@ import time, random, sys
 pg.init()
 pg.font.init()
 
+class Background(pg.sprite.Sprite):
+    def __init__(self, image_file):
+        pg.sprite.Sprite.__init__(self)  #call Sprite initializer
+        self.image = pg.image.load(image_file)
+        screen.blit(pg.transform.scale(self.image, (800,600)), (0,0))
+        pg.display.flip()   
+        self.rect = self.image.get_rect()
+
 #set up the output screen
 screen_width=960
 screen_height=600
 screen = pg.display.set_mode([screen_width, screen_height])
 pg.display.set_caption('Snake Game by Shivani')
-BackGround = Background('C:/Users/shiva/OneDrive/Documents/NYIT-MSDS-stuff/class-610-programming/Final-Project/Resources/bg-12.jpeg')
+BackGround = Background('resources/bg-12.jpeg')
 
 
 my_font = pg.font.SysFont('Calibri', 25, bold=True)
@@ -22,14 +30,8 @@ white = (255,255,255)
 red = (255,0,0)
 green = (0,255,0)
 blue = (0,0,255)
+maroon = (128,0,0)
 
-class Background(pg.sprite.Sprite):
-    def __init__(self, image_file):
-        pg.sprite.Sprite.__init__(self)  #call Sprite initializer
-        self.image = pg.image.load(image_file)
-        screen.blit(pg.transform.scale(self.image, (800,600)), (0,0))
-        pg.display.flip()   
-        self.rect = self.image.get_rect()
 
 # Score display
 def show_score(choice, color):
