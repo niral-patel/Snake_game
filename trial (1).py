@@ -17,7 +17,7 @@ class Background(pg.sprite.Sprite):
 screen_width=960
 screen_height=600
 screen = pg.display.set_mode([screen_width, screen_height])
-pg.display.set_caption('Snake Game by Shivani')
+pg.display.set_caption('Snake Game by Shivani and Niral')
 BackGround = Background('resources/bg-12.jpeg')
 
 
