@@ -1,4 +1,5 @@
 # ignore the file literally named .docx
-Project\[01\].docx
-Project\[02\].pdf
-.zip
+*.docx
+*.pdf
+*.zip
+*.pptx
