@@ -1,4 +1,6 @@
 # ignore the file literally named .docx
+Project-Proposal.docx
+Project-Proposal-Niral-Shivani.pdf
 *.docx
 *.pdf
 *.zip
